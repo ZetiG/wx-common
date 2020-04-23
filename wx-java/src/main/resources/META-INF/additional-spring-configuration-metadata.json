@@ -1,0 +1,69 @@
+{
+  "groups": [
+    {
+      "name": "wx.config",
+      "type": "com.mamaqunaer.wx.properties.WxProperties",
+      "sourceType": "com.mamaqunaer.wx.properties.WxProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "wx.config.appid",
+      "type": "java.lang.String",
+      "sourceType": "com.mamaqunaer.wx.properties.WxProperties"
+    },
+    {
+      "name": "wx.config.secret",
+      "type": "java.lang.String",
+      "sourceType": "com.mamaqunaer.wx.properties.WxProperties"
+    },
+    {
+      "name": "wx.config.js_code",
+      "type": "java.lang.String",
+      "sourceType": "com.mamaqunaer.wx.properties.WxProperties"
+    },
+    {
+      "name": "wx.config.grant_type",
+      "type": "java.lang.String",
+      "sourceType": "com.mamaqunaer.wx.properties.WxProperties"
+    }
+  ],
+  "hints": [
+    {
+      "name": "wx.config.appid",
+      "values": [
+        {
+          "value": "wxefb1c727022be3ca",
+          "description": "Disable DDL handling."
+        }
+      ]
+    },
+    {
+      "name": "wx.config.secret",
+      "values": [
+        {
+          "value": "b9d20b0f5d6d7c518b81e6c2943d7083",
+          "description": "Disable DDL handling."
+        }
+      ]
+    },
+    {
+      "name": "wx.config.js_code",
+      "values": [
+        {
+          "value": "json_code",
+          "description": "Disable DDL handling."
+        }
+      ]
+    },
+    {
+      "name": "wx.config.grant_type",
+      "values": [
+        {
+          "value": "authorization_code",
+          "description": "Disable DDL handling."
+        }
+      ]
+    }
+  ]
+}
