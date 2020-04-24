@@ -3,7 +3,7 @@ package com.mamaqunaer.wx.object;
 import java.io.Serializable;
 
 /**
- * Description: (用一句话描述该文件做什么)
+ * Description: 微信配置类
  *
  * @Date 2020/4/23 16:31
  * @Author Zeti
@@ -11,6 +11,11 @@ import java.io.Serializable;
 public class WxProperties implements Serializable {
 
     private static final long serialVersionUID = 2355737574260978119L;
+
+    /**
+     * 微信url
+     */
+    private String url;
 
     /**
      * appId
@@ -30,14 +35,19 @@ public class WxProperties implements Serializable {
     public WxProperties() {
     }
 
-    public WxProperties(String appid, String secret, String grant_type) {
+    public WxProperties(String url, String appid, String secret, String grant_type) {
+        this.url = url;
         this.appid = appid;
         this.secret = secret;
         this.grant_type = grant_type;
     }
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public String getAppid() {

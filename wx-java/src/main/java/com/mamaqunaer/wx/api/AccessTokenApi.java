@@ -2,6 +2,7 @@ package com.mamaqunaer.wx.api;
 
 import com.mamaqunaer.wx.object.AccessTokenReturn;
 import com.mamaqunaer.wx.object.WxProperties;
+import retrofit2.http.GET;
 
 /**
  * Description: 获取access_token
@@ -15,8 +16,9 @@ public interface AccessTokenApi {
      * 获取access_token
      *
      * @param wxProperties 获取微信token类
-     * @return result
+     * @return AccessTokenReturn
      */
+    @GET("/cgi-bin/token")
     AccessTokenReturn getAccessToken(WxProperties wxProperties);
 
 }

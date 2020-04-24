@@ -37,9 +37,6 @@ public class BaseReturn implements Serializable {
         this.data = data;
     }
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
 
     public Integer getErrcode() {
         return errcode;

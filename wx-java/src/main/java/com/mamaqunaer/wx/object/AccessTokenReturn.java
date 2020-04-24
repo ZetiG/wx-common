@@ -30,10 +30,6 @@ public class AccessTokenReturn extends BaseReturn {
         this.expires_in = expires_in;
     }
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
-
     public String getAccess_token() {
         return access_token;
     }

@@ -69,10 +69,6 @@ public class TemplateSendProperties implements Serializable {
         this.lang = lang;
     }
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
-
     public String getAccess_token() {
         return access_token;
     }

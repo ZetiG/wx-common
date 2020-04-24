@@ -8,6 +8,11 @@
   ],
   "properties": [
     {
+      "name": "wx.config.url",
+      "type": "java.lang.String",
+      "sourceType": "com.mamaqunaer.wx.properties.WxProperties"
+    },
+    {
       "name": "wx.config.appid",
       "type": "java.lang.String",
       "sourceType": "com.mamaqunaer.wx.properties.WxProperties"
@@ -29,6 +34,15 @@
     }
   ],
   "hints": [
+    {
+      "name": "wx.config.url",
+      "values": [
+        {
+          "value": "https://api.weixin.qq.com",
+          "description": "Disable DDL handling."
+        }
+      ]
+    },
     {
       "name": "wx.config.appid",
       "values": [

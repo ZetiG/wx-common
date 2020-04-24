@@ -47,10 +47,6 @@ public class TemplateAdd implements Serializable {
         this.sceneDesc = sceneDesc;
     }
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
-
     public String getAccess_token() {
         return access_token;
     }

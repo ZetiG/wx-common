@@ -36,10 +36,6 @@ public class TemplateAddReturn implements Serializable {
         this.priTmplId = priTmplId;
     }
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
-
     public Integer getErrcode() {
         return errcode;
     }

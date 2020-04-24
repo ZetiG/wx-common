@@ -49,10 +49,6 @@ public class Template implements Serializable {
         this.type = type;
     }
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
-
     public String getPriTmplId() {
         return priTmplId;
     }
