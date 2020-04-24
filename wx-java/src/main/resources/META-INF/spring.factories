@@ -1,2 +1,3 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.mamaqunaer.wx.core.RetrofitClientAutoRegister\
 com.mamaqunaer.wx.interceptor.InterceptorLogConfig

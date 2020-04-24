@@ -10,9 +10,11 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>wx-java</module>
+        <module>wx-java</module>
     </modules>
 
     <properties>
+        <java.version>1.8</java.version>
         <spring.boot.version>2.2.0.RELEASE</spring.boot.version>
         <spring.boot.test.version>2.2.0.RELEASE</spring.boot.test.version>
         <spring.configuration.processor>2.2.0.RELEASE</spring.configuration.processor>
@@ -94,4 +96,13 @@
 
     </dependencyManagement>
 
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
