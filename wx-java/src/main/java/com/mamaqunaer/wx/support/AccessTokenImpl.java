@@ -3,6 +3,7 @@ package com.mamaqunaer.wx.support;
 import com.mamaqunaer.wx.api.AccessTokenApi;
 import com.mamaqunaer.wx.object.AccessTokenReturn;
 import com.mamaqunaer.wx.object.WxProperties;
+import retrofit2.Call;
 
 /**
  * Description: 获取token接口
@@ -14,7 +15,7 @@ public class AccessTokenImpl implements AccessTokenApi {
 
 
     @Override
-    public AccessTokenReturn getAccessToken(String appid, String secret, String grant_type) {
+    public Call<AccessTokenReturn> getAccessToken(String appid, String secret, String grant_type) {
         return null;
     }
 }
