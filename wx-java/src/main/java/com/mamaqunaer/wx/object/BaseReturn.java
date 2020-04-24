@@ -3,7 +3,7 @@ package com.mamaqunaer.wx.object;
 import java.io.Serializable;
 
 /**
- * Description: 返回结果基类(用一句话描述该文件做什么)
+ * Description: 返回结果基类
  *
  * @Date 2020/4/23 17:00
  * @Author Zeti

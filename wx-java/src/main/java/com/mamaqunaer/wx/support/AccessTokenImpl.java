@@ -13,7 +13,8 @@ import com.mamaqunaer.wx.object.WxProperties;
 public class AccessTokenImpl implements AccessTokenApi {
 
 
-    public AccessTokenReturn getAccessToken(WxProperties wxProperties) {
+    @Override
+    public AccessTokenReturn getAccessToken(String appid, String secret, String grant_type) {
         return null;
     }
 }

@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * Description: 新增模板类(用一句话描述该文件做什么)
+ * Description: 新增模板类
  *
  * @Date 2020/4/23 17:45
  * @Author Zeti

@@ -1,8 +1,9 @@
 package com.mamaqunaer.wx.api;
 
 import com.mamaqunaer.wx.object.AccessTokenReturn;
-import com.mamaqunaer.wx.object.WxProperties;
+import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Query;
 
 /**
  * Description: 获取access_token
@@ -15,10 +16,14 @@ public interface AccessTokenApi {
     /**
      * 获取access_token
      *
-     * @param wxProperties 获取微信token类
+     * @param appid      appId
+     * @param secret     secret
+     * @param grant_type 填写client_credential
      * @return AccessTokenReturn
      */
     @GET("/cgi-bin/token")
-    AccessTokenReturn getAccessToken(WxProperties wxProperties);
+    Call<AccessTokenReturn> getAccessToken(@Query("appid") String appid,
+                        @Query("secret") String secret,
+                        @Query("grant_type") String grant_type);
 
 }

@@ -2,7 +2,7 @@ package com.mamaqunaer.wx.object;
 
 
 /**
- * Description: (用一句话描述该文件做什么)
+ * Description: 获取凭证返回类
  *
  * @Date 2020/4/23 16:39
  * @Author Zeti

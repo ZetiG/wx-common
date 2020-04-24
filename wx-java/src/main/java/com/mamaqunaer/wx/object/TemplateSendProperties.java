@@ -3,7 +3,7 @@ package com.mamaqunaer.wx.object;
 import java.io.Serializable;
 
 /**
- * Description: (用一句话描述该文件做什么)
+ * Description: 发送模板消息类
  *
  * @Date 2020/4/23 16:53
  * @Author Zeti

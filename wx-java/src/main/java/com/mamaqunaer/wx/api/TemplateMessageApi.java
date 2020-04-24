@@ -4,8 +4,8 @@ import com.mamaqunaer.wx.object.BaseReturn;
 import com.mamaqunaer.wx.object.TemplateAdd;
 import com.mamaqunaer.wx.object.TemplateAddReturn;
 import com.mamaqunaer.wx.object.TemplateSendProperties;
-import retrofit2.http.GET;
-import retrofit2.http.POST;
+import retrofit2.Call;
+import retrofit2.http.*;
 
 /**
  * Description: 订阅消息接口
@@ -22,7 +22,7 @@ public interface TemplateMessageApi {
      * @return BaseReturn
      */
     @POST("/cgi-bin/message/subscribe/send")
-    BaseReturn sendTemplate(TemplateSendProperties sendProperties);
+    Call<BaseReturn> sendTemplate(@Body TemplateSendProperties sendProperties);
 
     /**
      * 获取模板列表
@@ -31,7 +31,7 @@ public interface TemplateMessageApi {
      * @return BaseReturn
      */
     @GET("/wxaapi/newtmpl/gettemplate")
-    BaseReturn getTemplateList(String access_token);
+    Call<BaseReturn> getTemplateList(@Query("access_token") String access_token);
 
     /**
      * 新增模板
@@ -40,7 +40,7 @@ public interface TemplateMessageApi {
      * @return TemplateAddReturn
      */
     @POST("/wxaapi/newtmpl/addtemplate")
-    TemplateAddReturn addTemplate(TemplateAdd templateAdd);
+    Call<TemplateAddReturn> addTemplate(@Body TemplateAdd templateAdd);
 
     /**
      * 删除模板
@@ -50,7 +50,9 @@ public interface TemplateMessageApi {
      * @return BaseReturn
      */
     @POST("/wxaapi/newtmpl/deltemplate")
-    BaseReturn deleteTemplate(String access_token, String priTmplId);
+    @FormUrlEncoded
+    Call<BaseReturn> deleteTemplate(@Field("access_token") String access_token,
+                              @Field("priTmplId") String priTmplId);
 
     /**
      * 获取小程序账号的类目
@@ -59,6 +61,7 @@ public interface TemplateMessageApi {
      * @return BaseReturn
      */
     @GET("/wxaapi/newtmpl/getcategory")
-    BaseReturn getCategory(String access_token);
+    Call<BaseReturn> getCategory(@Query("access_token") String access_token);
+
 
 }
