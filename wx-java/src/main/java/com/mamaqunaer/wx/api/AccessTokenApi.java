@@ -25,7 +25,7 @@ public interface AccessTokenApi {
      */
     @GET("/cgi-bin/token")
     Call<AccessTokenReturn> getAccessToken(@Query("appid") String appid,
-                        @Query("secret") String secret,
-                        @Query("grant_type") String grant_type);
+                                           @Query("secret") String secret,
+                                           @Query("grant_type") String grant_type);
 
 }

@@ -27,8 +27,7 @@ public class InterceptorLogConfig {
     public Interceptor logInterceptor() {
         HttpLoggingInterceptor interceptorBody = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
             public void log(String message) {
-                if (message.startsWith("->")) logger.debug(message);
-                if (message.startsWith("{")) logger.debug(message);
+                if (message.startsWith("->") || message.startsWith("{")) logger.debug(message);
             }
         });
         interceptorBody.setLevel(HttpLoggingInterceptor.Level.BODY);

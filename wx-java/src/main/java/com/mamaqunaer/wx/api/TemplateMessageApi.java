@@ -52,7 +52,7 @@ public interface TemplateMessageApi {
     @POST("/wxaapi/newtmpl/deltemplate")
     @FormUrlEncoded
     Call<BaseReturn> deleteTemplate(@Field("access_token") String access_token,
-                              @Field("priTmplId") String priTmplId);
+                                    @Field("priTmplId") String priTmplId);
 
     /**
      * 获取小程序账号的类目
