@@ -16,7 +16,7 @@ public @interface RetrofitClient {
     /**
      * bean name
      */
-    String name() default "";
+    String value() default "";
 
     /**
      * baseUrl地址
