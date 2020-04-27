@@ -1,16 +1,17 @@
 package com.mamaqunaer.wx;
 
 import com.mamaqunaer.wx.api.AccessTokenApi;
+import com.mamaqunaer.wx.api.TemplateMessageApi;
 import com.mamaqunaer.wx.object.AccessTokenReturn;
+import com.mamaqunaer.wx.object.BaseReturn;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import retrofit2.Call;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
+import javax.annotation.Resource;
 import java.io.IOException;
 
 /**
@@ -28,6 +29,10 @@ public class AccessTokenImplTest {
 
     @Autowired
     private AccessTokenApi accessTokenApi;
+
+    @Autowired
+    private TemplateMessageApi templateMessageApi;
+
 
     public static void main(String[] args) {
 
@@ -49,7 +54,6 @@ public class AccessTokenImplTest {
 //        }
 
 
-
     }
 
     @Test
@@ -61,7 +65,7 @@ public class AccessTokenImplTest {
 //        AccessTokenApi accessTokenApi = retrofit.create(AccessTokenApi.class);
         //调用接口
         try {
-
+            Call<BaseReturn> templateList = templateMessageApi.getTemplateList("");
             Call<AccessTokenReturn> accessToken = accessTokenApi.getAccessToken(appid, secret, grant_type);
             Response<AccessTokenReturn> execute = accessToken.execute();
             logger.info("execute_logger-> {}", execute.body());

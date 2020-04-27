@@ -1,6 +1,7 @@
 package com.mamaqunaer.wx.api;
 
 import com.mamaqunaer.wx.annotation.RetrofitClient;
+import com.mamaqunaer.wx.interceptor.InterceptorLogConfig;
 import com.mamaqunaer.wx.object.AccessTokenReturn;
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -12,7 +13,7 @@ import retrofit2.http.Query;
  * @Date 2020/4/23 16:36
  * @Author Zeti
  */
-@RetrofitClient()
+@RetrofitClient(value = "accessTokenApi", url = "https://api.weixin.qq.com", interceptor = InterceptorLogConfig.class)
 public interface AccessTokenApi {
 
     /**

@@ -14,6 +14,11 @@ import org.springframework.stereotype.Component;
 public class WxProperties {
 
     /**
+     * url
+     */
+    private String url;
+
+    /**
      * appId
      */
     private String appid;
@@ -33,6 +38,14 @@ public class WxProperties {
      */
     private String grant_type;
 
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
     public String getAppid() {
         return appid;
