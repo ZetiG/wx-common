@@ -27,4 +27,8 @@ public @interface EnableRetrofitClient {
      */
     String[] basePackages() default {"com.mamaqunaer.wx"};
 
+    /**
+     * 扫描包路径数组
+     */
+    Class<?>[] basePackageClasses() default {};
 }
